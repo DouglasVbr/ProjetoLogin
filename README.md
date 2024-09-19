@@ -60,12 +60,20 @@ public class TelaLogin extends javax.swing.JFrame {
     
     
     
-    public TelaLogin() {
-        initComponents();
-        
-        conexao = ConexaoDAO.conector();
-        System.out.println(conexao);
+  public TelaLogin() {
+    initComponents();
+    
+    conexao = ConexaoDAO.conector();
+    
+    if (conexao != null) {
+        lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/Icones/connected.png")));
+        lblStatus.setText("Conectado");
+    } else {
+        lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/Icones/disconnected.png")));
+        lblStatus.setText("Desconectado");
     }
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
