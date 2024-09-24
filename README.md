@@ -195,3 +195,50 @@ public class TelaLogin extends javax.swing.JFrame {
 
 ![image](https://github.com/user-attachments/assets/b92d693c-693d-4f20-9463-6630af346ba0)
 
+
+# banco de dados 
+
+-- Criar tabela
+create table tb_usuarios(
+id_usuario int primary key,
+usuario varchar(50) not null,
+login varchar(50) not null unique,
+senha varchar(15)not null
+);
+
+--  Descrever a tabela
+describe tb_usuarios;
+
+-- Inserir dados na tabela(create)
+insert into tb_usuarios(id_usuario, usuario, login, senha)
+values(1, 'Eder de Rosso', 'ederrosso', '123456');
+
+insert into tb_usuarios(id_usuario, usuario, login, senha)
+values(2, 'administrador', 'admin', 'admin');
+
+-- selecionar itens da tabela(read)
+select * from tb_usuarios;
+
+-- editar itens da tabela(update)
+update tb_usuarios set usuario = 'rossoeder' where id_usuario = 1;
+
+-- excluir um item da tabela(delete)
+delete from tb_usuarios where id_usuario = 1;
+
+-- inserindo usuario 
+insert into tb_usuarios(id_usuario, usuario, login, senha)
+values(3, 'Douglas', 'Dunga', '123456');
+
+
+
+# codigo parte 2 
+![metodologar](https://github.com/user-attachments/assets/be7f4795-97aa-4b3f-b7ed-66fe083dabf1)
+
+
+
+
+![telaloginparte2](https://github.com/user-attachments/assets/63c5a50f-ff81-468d-abc3-fc898439400d)
+
+
+![telabanco](https://github.com/user-attachments/assets/586ea321-ed49-4647-824b-fad6a74c69c8)
+
